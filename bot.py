@@ -42,6 +42,10 @@ def echo(update, context):
     update.message.reply_sticker('CAACAgIAAxkBAAEEY6BiTVNowh7ichwQu0sSYZnRL5HiZQACqgYAAtJaiAFIBau3svuQYSME')
 
 
+def reply(update, context):
+    update.message.reply_text('Ahhan, FBI wants to know your location!')
+
+
 def error(update, context):
     """Log Errors caused by Updates."""
     logger.warning('Update "%s" caused error "%s"', update, context.error)
@@ -64,6 +68,7 @@ def main():
 
     # on noncommand i.e message - echo the message on Telegram
     dp.add_handler(MessageHandler(Filters.text, echo))
+    dp.add_handler(MessageHandler("boo", reply))
 
     # log all errors
     dp.add_error_handler(error)
