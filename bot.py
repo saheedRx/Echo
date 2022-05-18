@@ -26,7 +26,7 @@ def piracy(update, context):
 
 def echo(update, context):
     """Echo the user message."""
-    update.message.reply_sticker(CAACAgIAAxkBAAEEY6BiTVNowh7ichwQu0sSYZnRL5HiZQACqgYAAtJaiAFIBau3svuQYSME)
+    update.message.reply_sticker('CAACAgIAAxkBAAEEY6BiTVNowh7ichwQu0sSYZnRL5HiZQACqgYAAtJaiAFIBau3svuQYSME')
 
 
 def error(update, context):
