@@ -24,6 +24,24 @@ def piracy(update, context):
     update.message.reply_text('Ahhan, FBI wants to know your location!')
 
 
+def sample_responses(input_text):
+    user_message = str(input_text).lower()
+
+    if user_message in ("hello", "hi", "sup",):
+        return "Hey! How's it going?"
+
+    if user_message in ("who are you", "who are you?"):
+        return "I am TheCodeBase_bot!"
+
+    if user_message in ("time", "time?"):
+        now = datetime.now()
+        date_time = now.strftime("%d/%m/%y, %H:%M:%S")
+
+        return str(date_time)
+
+    return "I don't understand you."
+
+
 def echo(update, context):
     """Echo the user message."""
     update.message.reply_sticker('CAACAgIAAxkBAAEEY6BiTVNowh7ichwQu0sSYZnRL5HiZQACqgYAAtJaiAFIBau3svuQYSME')
