@@ -1,5 +1,6 @@
 import logging
 
+from telegram.ext import *
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 # Enable logging
@@ -32,12 +33,6 @@ def sample_responses(input_text):
 
     if user_message in ("who are you", "who are you?"):
         return "I am TheCodeBase_bot!"
-
-    if user_message in ("time", "time?"):
-        now = datetime.now()
-        date_time = now.strftime("%d/%m/%y, %H:%M:%S")
-
-        return str(date_time)
 
     return "I don't understand you."
 
